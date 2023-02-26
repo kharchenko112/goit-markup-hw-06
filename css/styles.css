@@ -741,14 +741,24 @@ letter-spacing: 0.02em;
 color: var(--main-color-text);
 margin-bottom: 16px;
 }
+
 .input-modal{
 border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 height: 40px;
 width: 360px;
-gap: 26;
-margin-bottom: 26px;
+position: relative;
 margin-top: 4px;
+padding-left: 38px;
+outline: none;
+
+}
+
+.input-modal:focus{
+  border-color: var(--accent-color);
+}
+.input-modal:focus + .modal-icon {
+  fill: var(--accent-color);
 }
 .input-modal:last-child{
   margin-bottom: 8px;
@@ -759,8 +769,22 @@ font-size: 12px;
 line-height: 1.33;
 letter-spacing: 0.04em;
 color: #8E8F99;
+position: relative;
+
 
 }
+.modal-icon{
+  display: inline-block;
+  width: 18px;
+  height: 24px;
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--main-color-title);
+}
+
+
 .comment-modal{
 width: 360px;
 height: 120px;
@@ -770,6 +794,10 @@ border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 margin-top: 4px;
 margin-bottom: 16px;
+outline: none;
+}
+.comment-modal:focus{
+  border-color: var(--accent-color);
 }
 .checkbox{
 border: 1.25px solid #2E2F42;
